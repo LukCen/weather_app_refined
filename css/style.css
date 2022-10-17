@@ -1,0 +1,34 @@
+.weather-block {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: #54B8F7;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+}
+
+.rows-content {
+  display: flex;
+  justify-content: space-evenly;
+  height: 33.3333%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+:root {
+  font-size: 15px;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  padding: 1rem;
+}
+
+body {
+  background-color: #054B75;
+}
+
+/*# sourceMappingURL=style.css.map */

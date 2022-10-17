@@ -1,0 +1,20 @@
+@import 'vars' ;
+@import 'components';
+:root{
+    font-size: 15px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    padding: 1rem;
+}
+body {
+    background-color: #054B75;
+}
+
+.col {
+    // border: 1px solid white;
+}
+
