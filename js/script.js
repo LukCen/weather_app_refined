@@ -1,6 +1,5 @@
 'use strict';
-import './functions.js';
-import { animateDataContainers } from './functions.js';
+
 
 // VARS
 
@@ -41,9 +40,7 @@ getWeather('').then(result => {
         
         
     citySelector.addEventListener('change', () => {
-        const anim = animateDataContainers()
-
-        requestAnimationFrame((anim(col3)), 1000);
+       
         let currentlySelected = citySelector.selectedIndex -1;
 
         colName.innerHTML = result[currentlySelected].stacja;
