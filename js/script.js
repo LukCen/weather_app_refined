@@ -1,4 +1,6 @@
 'use strict';
+import './functions.js';
+import { animateDataContainers } from './functions.js';
 
 // VARS
 
@@ -6,6 +8,7 @@ const mainUrl = 'https://danepubliczne.imgw.pl/api/data/synop/station';
 
 let citySelector = document.querySelector('#citySelect');
 
+const col3 = document.querySelectorAll('.col-3');
 const colName = document.querySelector('#col-name');
 const colTemp = document.querySelector('#col-temp');
 const colPress = document.querySelector('#col-press');
@@ -38,6 +41,9 @@ getWeather('').then(result => {
         
         
     citySelector.addEventListener('change', () => {
+        const anim = animateDataContainers()
+
+        requestAnimationFrame((anim(col3)), 1000);
         let currentlySelected = citySelector.selectedIndex -1;
 
         colName.innerHTML = result[currentlySelected].stacja;

@@ -22,9 +22,13 @@
 }
 
 .col-3 {
+    display: none !important;
     background-color: $lightBlue;
     border: 1px solid white;
     border-radius: 1rem;
+    font-size: 2rem;
+    transition: transform 2s ease-in forwards;
+    transform: scale(1.1);
 }
 
 .form-select-lg {
