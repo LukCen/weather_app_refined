@@ -4,10 +4,12 @@
     height: 100%;
     width: 100%;
     display: flex;
-    background-color: #54B8F7;
+    background-color: $medBlue;
     justify-content: center;
     align-items: center;
     border-radius: 1.5rem;
+    border: 1px solid $lightBlue;
+    
 
 }
 
@@ -15,7 +17,23 @@
     display: flex;
     justify-content: space-evenly;
     height: 33.3333%;
-    width: 100%;
-    border: 1px solid black;
+    // border: 1px solid black;
+    text-shadow: 1px 2px 5px black;
 }
 
+.col-3 {
+    background-color: $lightBlue;
+    border: 1px solid white;
+    border-radius: 1rem;
+}
+
+.form-select-lg {
+    height: 33.333%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.label-sizing {
+    width: 33.3333%;
+    text-align: center;
+}

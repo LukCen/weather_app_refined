@@ -6,6 +6,7 @@ const mainUrl = 'https://danepubliczne.imgw.pl/api/data/synop/station';
 
 let citySelector = document.querySelector('#citySelect');
 
+const colName = document.querySelector('#col-name');
 const colTemp = document.querySelector('#col-temp');
 const colPress = document.querySelector('#col-press');
 const colHum = document.querySelector('#col-hum');
@@ -34,12 +35,14 @@ getWeather('').then(result => {
 
     })
     
-    function injectData(){
         
+        
+    citySelector.addEventListener('change', () => {
         let currentlySelected = citySelector.selectedIndex -1;
-        colTemp.innerHTML = result[currentlySelected].temperatura;
-        colPress.innerHTML = result[currentlySelected].cisnienie;
-        colHum.innerHTML = result[currentlySelected].wilgotnosc_wzgledna;
-    }
-    citySelector.addEventListener('change', injectData())
+
+        colName.innerHTML = result[currentlySelected].stacja;
+        colTemp.innerHTML = `${result[currentlySelected].temperatura}°C`;
+        colPress.innerHTML = `${result[currentlySelected].cisnienie}°C`;
+        colHum.innerHTML = `${result[currentlySelected].wilgotnosc_wzgledna}°C`;
+    })
 })

@@ -12,27 +12,48 @@
 </head>
 <body>
     <main>
+        <!-- TOP PART -->
         <div class="container h-100 ">
 
             <div class="row h-50 justify-content-center">
                 <div class="d-flex col col-6 justify-content-center align-items-center">TEST TEXT</div>
             </div>
-
+            <!-- ------------------------------------------------------------- -->
+            <!-- BOT PART -->
+            <!-- CITY SELECTOR -->
             <div class="row h-50 justify-content-center">
-                <div class="col col-8 p-0">
+                <div class="col col-9 p-0">
                     <div class="d-flex flex-column justify-content-between weather-block">
-                        <div class="row w-75 rows-content pt-2">
-                                <select class="form-select h-25" aria-label="Default" id="citySelect">
-                                <option selected>Open this select menu</option>
-                              </select>
-                            </div>
+                        <div class=" d-flex w-75 rows-content justify-content-center align-items-center">
+                                <select class="form-select-sm" aria-label="Default" id="citySelect">
+                                    <option selected>Open this select menu</option>
+                                </select>
+                        </div>
+                            <!-- --------------------------------------------- -->
+                            <!-- CITY NAME DISPLAY -->
                             <div class="row rows-content">
-                                <div class="col" id="col-name">Nazwa idzie tutaj</div>
+                                <div class="col d-flex justify-content-center align-items-center font-monospace" id="col-name"></div>
                             </div>
-                            <div class="row rows-content">
-                                <div class="col col-4 h-100" id="col-temp">Temperatura</div>
-                                <div class="col col-4 h-100" id="col-press">Ciśnienie</div>
-                                <div class="col col-4 h-100" id="col-hum">Wilgotność?</div>
+
+                            <!-- LABELS -->
+                            <div class="d-flex justify-content-evenly w-100">
+                                <label class="d-flex justify-content-center label-sizing mx-5" for="col-temp">Temperature</label>
+                                <label class="d-flex justify-content-center label-sizing" for="col-press">Air pressure</label>
+                                <label class="d-flex justify-content-center label-sizing mx-5" for="col-hum">Humidity</label>
+                            </div>
+                            
+
+                            <!-- DATA CONTAINERS -->
+                            <div class=" d-flex row w-100 rows-content p-1 mb-3 justify-content-evenly gx-4">
+                                
+                                <!-- TEMP -->
+                                <div class="d-flex justify-content-center align-items-center col col-3 h-100 " id="col-temp"></div>
+                                
+                                <!-- AIR PRESSURE -->
+                                <div class="d-flex justify-content-center align-items-center col col-3 h-100 " id="col-press"></div>
+                                
+                                <!-- HUMIDITY -->
+                                <div class="d-flex justify-content-center align-items-center col col-3 h-100 " id="col-hum"></div>
                             </div>
                     </div>
                 </div>
