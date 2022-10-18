@@ -45,7 +45,7 @@ getWeather('').then(result => {
 
         colName.innerHTML = result[currentlySelected].stacja;
         colTemp.innerHTML = `${result[currentlySelected].temperatura}°C`;
-        colPress.innerHTML = `${result[currentlySelected].cisnienie}°C`;
-        colHum.innerHTML = `${result[currentlySelected].wilgotnosc_wzgledna}°C`;
+        colPress.innerHTML = `${result[currentlySelected].cisnienie} hPA`;
+        colHum.innerHTML = `${result[currentlySelected].wilgotnosc_wzgledna}%`;
     })
 })
