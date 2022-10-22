@@ -29,6 +29,7 @@ const getWeather = async station => {
     }
 
 }
+
 getWeather('').then(result => {
     result.forEach((city) => {
         let newChoice = document.createElement('option');
@@ -38,14 +39,27 @@ getWeather('').then(result => {
     })
     
         
+    function test(){
+        return (`${colName.offsetWidth} ${colName.offsetHeight}`);
+        
+    }
         
     citySelector.addEventListener('change', () => {
+        
+
        
         let currentlySelected = citySelector.selectedIndex -1;
 
-        colName.innerHTML = result[currentlySelected].stacja;
-        colTemp.innerHTML = `${result[currentlySelected].temperatura}°C`;
-        colPress.innerHTML = `${result[currentlySelected].cisnienie} hPA`;
-        colHum.innerHTML = `${result[currentlySelected].wilgotnosc_wzgledna}%`;
+        colName.textContent = result[currentlySelected].stacja;
+        colTemp.textContent = `${result[currentlySelected].temperatura}°C`;
+        colPress.textContent = `${result[currentlySelected].cisnienie} hPA`;
+        colHum.textContent = `${result[currentlySelected].wilgotnosc_wzgledna}%`;
+        console.log(colTemp.innerHTML)
+        console.log(typeof parseInt(colTemp.innerHTML))
     })
 })
+
+
+
+
+// console.log(test())
